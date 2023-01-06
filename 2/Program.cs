@@ -1,7 +1,9 @@
 ﻿Console.Clear();
+
 string[] ArrayStrings = new string[] { };
-Console.Write("Введите количество элементов массива - строк:");
+Console.Write("Введите количество строк: ");
 int n = int.Parse(Console.ReadLine());
+
 ArrayStrings = new string[n];
 for (int i = 0; i < ArrayStrings.Length; i++)
 {
@@ -9,14 +11,13 @@ for (int i = 0; i < ArrayStrings.Length; i++)
     ArrayStrings[i] = Console.ReadLine();
 }
 Console.WriteLine();
-Console.WriteLine("массив введенных данных:");
+Console.WriteLine("Полученный массив:");
 Console.WriteLine($"{PrintArray(ArrayStrings)}");
 Console.WriteLine();
 
-int length = 3;  // задаем парметр длины элемент массива, который согласно заданию озвучен
+int length = 3;  // задаем параметр длины элемента массива
 
-// функция определения количества элемента массива длина которых меньше какой-то заданной длины length
-int CheckArray(string[] array, int length)
+int CheckArray(string[] array, int length) // функция определения количества элемента массива длина которых меньше length
 {
     int result = 0;
     for (int i = 0; i < array.Length; i++)
@@ -60,5 +61,5 @@ string PrintArray(string[] array)
     return result;
 }
 
-Console.WriteLine("элементы массива  длина которых меньше либо равна 3 символа:");
+Console.WriteLine("элементы массива, длинна которых меньше либо равна 3 символам:");
 Console.WriteLine($"{PrintArray(newArrayStrings)}");
